@@ -225,6 +225,7 @@ td{
 	#addbutton{
 		z-index:99999;
 		top:.5em;
+		font-size:2em;
 	}
 	.addmenu{
 		width:100vw;
