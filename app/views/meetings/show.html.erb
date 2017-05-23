@@ -1,19 +1,13 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Date:</strong>
-  <%= @meeting.date %>
+  <b><%= @meeting.client.name %></b>
 </p>
-
 <p>
-  <strong>Time:</strong>
-  <%= @meeting.time %>
+	<%= @meeting.date.strftime('%d-%m-%y') %> @ <%= @meeting.time.strftime('%H:%M') %>
 </p>
-
 <p>
-  <strong>Client:</strong>
-  <%= @meeting.client %>
+<%= @meeting.description %>
 </p>
-
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>
+<%= link_to '', request.referer.present? ? request.referer : default_path, class: 'showbutton glyphicon glyphicon-arrow-left' %>
+<%= link_to '', edit_meeting_path(@meeting), class: 'showbutton glyphicon glyphicon-pencil' %>
+<%= link_to '', @meeting, method: :delete, data: { confirm: 'Are you sure?' }, class: 'showbutton glyphicon glyphicon-trash' %>

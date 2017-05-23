@@ -23,9 +23,14 @@
 
   <div class="field">
     <%= f.label :client_id %>
-    <%= f.text_field :client_id %>
+    <%= f.collection_select :client_id, Client.all, :id, :name %>
   </div>
 
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

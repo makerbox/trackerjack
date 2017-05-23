@@ -1,2 +1,16 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="flexbox">
+<div class="column-3">
+<h1>Upcoming Meetings</h1><hr>
+<% @meetings.each do |meeting| %>
+	<%= link_to(meeting) do %>
+		<%= meeting.date.strftime("%a %d") %> @ <%= meeting.time.strftime("%H:%M") %> - <%= meeting.client.name %><hr>
+	<% end %>
+<% end %>
+</div>
+<div class="column-3">
+<h1>Tasks Due</h1><hr>
+</div>
+<div class="column-3">
+<h1>Overdue Invoices</h1><hr>
+</div>
+</div>

@@ -14,3 +14,38 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function(){
+
+
+
+$('#addbutton').click(function(){
+	var addmenu = $('.addmenu');
+	if(addmenu.hasClass('revealed')){
+		$(this).removeClass('closebutton');
+		addmenu.removeClass('revealed');
+		$('.content').css('opacity','1');
+	}else{
+		$(this).addClass('closebutton');
+		addmenu.addClass('revealed');
+		$('.content').css('opacity','0');
+	};
+});
+
+$('.hamburger').click(function(){
+	console.log('clicked');
+	var navbar = $('.navbar');
+	if(navbar.hasClass('nav-open')){
+		navbar.removeClass('nav-open');
+	}else{
+		navbar.addClass('nav-open');
+	}
+})
+
+
+
+
+
+
+})
+

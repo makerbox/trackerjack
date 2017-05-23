@@ -3,24 +3,48 @@
   <head>
     <title>Trackerjack</title>
     <%= csrf_meta_tags %>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
   	<div class="navbar">
-	  	<div class="navbutton">
-	  	</div>
-	  	<div class="navbutton">
-	  	</div>
-	  	<div class="navbutton">
-	  	</div>
-	  	<div class="navbutton">
-	  	</div>
-	  	<div class="navbutton">
+    <div class="hamburger glyphicon glyphicon-menu-hamburger"></div>
+  			<%= link_to(home_index_path, class: 'navbutton') do %>
+  			<span class='glyphicon glyphicon-home' aria-hidden='true'></span>
+  			<% end %><%= link_to 'Clients', clients_path, class: 'navbutton' %><%= link_to 'Projects', projects_path, class: 'navbutton' %><%= link_to 'Invoices', invoices_path, class: 'navbutton' %><%= link_to 'Meetings', meetings_path, class: 'navbutton' %>
+	  		<% if user_signed_in? %>
+	  			<%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'navbutton' %>
+	  		<% else %>
+	  			<%= link_to 'Log in', new_user_session_path, class: 'navbutton' %>
+	  		<% end %>
 	  	</div>
   	</div>
-    <%= yield %>
+  	<div class="content">
+    	<%= yield %>
+    </div>
+    <div id="addbutton" class="glyphicon glyphicon-plus" title="add new...">
+    </div>
+    <div class="addmenu"><h2>add new...</h2>
+    <%= link_to 'Meeting', new_meeting_path, class: 'addmenu-button' %>
+    <%= link_to 'Client', new_client_path, class: 'addmenu-button' %>
+    <%= link_to 'Project', new_project_path, class: 'addmenu-button' %>
+    <%= link_to 'Invoice', new_invoice_path, class: 'addmenu-button' %>
+    <%= link_to 'Task', new_task_path, class: 'addmenu-button' %>
+    <%= link_to 'Expense', new_expense_path, class: 'addmenu-button' %>
+    </div>
   </body>
 </html>
