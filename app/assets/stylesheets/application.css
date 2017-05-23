@@ -64,6 +64,11 @@ td{
 	transition:all 1s;
 }
 #addbutton{
+	display: block;
+    width: 2em;
+    height: 2em;
+    padding: .25em;
+    text-align: center;
 	font-size: 1.5em;
     position: absolute;
     left: .5em;
@@ -73,10 +78,7 @@ td{
     border-radius:100%;
     background:#CCC;
     color:#FFF;
-    padding:.5em;
-    text-align:center;
     vertical-align:middle;
-    display:block;
     z-index:999;
     border: 5px solid #FFF;
 }

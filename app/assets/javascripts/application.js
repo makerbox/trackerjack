@@ -33,12 +33,13 @@ $('#addbutton').click(function(){
 });
 
 $('.hamburger').click(function(){
-	console.log('clicked');
 	var navbar = $('.navbar');
 	if(navbar.hasClass('nav-open')){
 		navbar.removeClass('nav-open');
+		$('.hamburger::before').css('background','#CCC');
 	}else{
 		navbar.addClass('nav-open');
+		$('.hamburger::before').css('background','#4286f4');
 	}
 })
 

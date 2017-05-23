@@ -36,7 +36,9 @@
   	<div class="content">
     	<%= yield %>
     </div>
-    <a id="addbutton" class="glyphicon glyphicon-plus" title="add new...">
+    <a id="addbutton" title="add new...">
+    <div class="glyphicon glyphicon-plus">
+    </div>
     </a>
     <div class="addmenu"><h2>add new...</h2>
     <%= link_to 'Meeting', new_meeting_path, class: 'addmenu-button' %>
