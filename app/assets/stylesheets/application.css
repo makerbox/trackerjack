@@ -166,6 +166,12 @@ td{
 	display:none;
 }
 @media screen and (max-width:767px) , (max-device-width:767px){
+	body{
+		font-size:25px;
+	}
+	p,li,th,td{
+		font-size:25px;
+	}
 	.content{
 		padding-top:10vh;
 	}
