@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trackerjack</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="navbar">
+	  	<div class="navbutton">
+	  	</div>
+	  	<div class="navbutton">
+	  	</div>
+	  	<div class="navbutton">
+	  	</div>
+	  	<div class="navbutton">
+	  	</div>
+	  	<div class="navbutton">
+	  	</div>
+  	</div>
+    <%= yield %>
+  </body>
+</html>

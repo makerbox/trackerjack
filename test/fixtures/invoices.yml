@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 9.99
+  sent_date: 2017-05-22
+  paid_date: 2017-05-22
+  project: one
+
+two:
+  price: 9.99
+  sent_date: 2017-05-22
+  paid_date: 2017-05-22
+  project: two

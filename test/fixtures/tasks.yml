@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  due_date: 2017-05-22
+  description: MyText
+  invoice: one
+
+two:
+  due_date: 2017-05-22
+  description: MyText
+  invoice: two
