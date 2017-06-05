@@ -1,24 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @project.title %>
+  <strong><%= @project.title %></strong> - <%= @project.client.name %>
 </p>
 
 <p>
-  <strong>Quote price:</strong>
-  <%= @project.quote_price %>
+  $<%= @project.quote_price %>
 </p>
 
 <p>
-  <strong>Quote time:</strong>
-  <%= @project.quote_time %>
+  <%= @project.quote_time %> days
 </p>
 
-<p>
-  <strong>Client:</strong>
-  <%= @project.client %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to '', request.referer.present? ? request.referer : default_path, class: 'showbutton glyphicon glyphicon-arrow-left' %>
+<%= link_to '', edit_project_path(@project), class: 'showbutton glyphicon glyphicon-pencil' %>
+<%= link_to '', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'showbutton glyphicon glyphicon-trash' %>

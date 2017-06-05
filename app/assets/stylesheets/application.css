@@ -63,11 +63,14 @@ td{
 	padding:10vw;
 	transition:all 1s;
 }
+.glyphicon{
+	vertical-align:middle;
+}
 #addbutton{
 	display: block;
     width: 2em;
     height: 2em;
-    padding: .25em;
+    padding: 0;
     text-align: center;
 	font-size: 1.5em;
     position: absolute;
