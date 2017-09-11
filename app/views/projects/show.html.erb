@@ -5,13 +5,13 @@
 </p>
 
 <p>
-  $<%= @project.quote_price %>
+  $<%= number_with_precision(@project.quote_price, precision: 2) %>
 </p>
 
 <p>
   <%= @project.quote_time %> days
 </p>
 
-<%= link_to '', request.referer.present? ? request.referer : default_path, class: 'showbutton glyphicon glyphicon-arrow-left' %>
+<%= link_to '', :back, class: 'showbutton glyphicon glyphicon-arrow-left' %>
 <%= link_to '', edit_project_path(@project), class: 'showbutton glyphicon glyphicon-pencil' %>
 <%= link_to '', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'showbutton glyphicon glyphicon-trash' %>

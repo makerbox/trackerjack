@@ -2,4 +2,4 @@
 
 <%= render 'form', invoice: @invoice %>
 
-<%= link_to '', request.referer.present? ? request.referer : default_path, class: 'showbutton glyphicon glyphicon-arrow-left' %>
+<%= link_to '', :back, class: 'showbutton glyphicon glyphicon-arrow-left' %>

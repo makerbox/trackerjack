@@ -8,6 +8,6 @@
 <p>
 <%= @meeting.description %>
 </p>
-<%= link_to '', request.referer.present? ? request.referer : default_path, class: 'showbutton glyphicon glyphicon-arrow-left' %>
+<%= link_to '', :back, class: 'showbutton glyphicon glyphicon-arrow-left' %>
 <%= link_to '', edit_meeting_path(@meeting), class: 'showbutton glyphicon glyphicon-pencil' %>
 <%= link_to '', @meeting, method: :delete, data: { confirm: 'Are you sure?' }, class: 'showbutton glyphicon glyphicon-trash' %>

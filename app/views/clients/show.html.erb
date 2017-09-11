@@ -9,6 +9,6 @@
   <strong>Name:</strong>
   <%= @client.name %>
 </p>
-<%= link_to '', request.referer.present? ? request.referer : default_path, class: 'showbutton glyphicon glyphicon-arrow-left' %>
+<%= link_to '', :back, class: 'showbutton glyphicon glyphicon-arrow-left' %>
 <%= link_to '', edit_client_path(@client), class: 'showbutton glyphicon glyphicon-pencil' %>
 <%= link_to '', @client, method: :delete, data: { confirm: 'Are you sure?' }, class: 'showbutton glyphicon glyphicon-trash' %>
